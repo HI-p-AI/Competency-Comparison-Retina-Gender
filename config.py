@@ -27,7 +27,7 @@ class Config:
         'reduce_lr_patience': 25,
         'num_classes': 2,
         'loss_fn': keras.losses.CategoricalCrossentropy(),
-        'main_metric': keras.metrics.CategoricalAccuracy(),
+        'main_metric': keras.metrics.CategoricalAccuracy(name='accuracy'),
         'monitor_metric': 'val_loss',
         'seed': 225,
         'dataset_dir': '/media/ahanaf/media-1/Datasets/RU_Retina_Gender_Database_Norm',

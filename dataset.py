@@ -40,7 +40,7 @@ class LoadDataset:
             batch_size=None,
             label_mode=self.label_mode,
         )
-
+        self.class_names = validation_ds.class_names
         train_data = train_ds.map(lambda x, y: (tf.cast(x, tf.float32), tf.cast(y, tf.float32)), num_parallel_calls=tf.data.AUTOTUNE).prefetch(tf.data.AUTOTUNE)
         val_data = validation_ds.map(lambda x, y: (tf.cast(x, tf.float32), tf.cast(y, tf.float32)), num_parallel_calls=tf.data.AUTOTUNE).prefetch(tf.data.AUTOTUNE)
         test_data = test_ds.map(lambda x, y: (tf.cast(x, tf.float32), tf.cast(y, tf.float32)), num_parallel_calls=tf.data.AUTOTUNE).prefetch(tf.data.AUTOTUNE)
@@ -51,3 +51,7 @@ class LoadDataset:
         print(f'Class Names(indexed): {validation_ds.class_names}')
         
         return train_data, val_data, test_data
+    
+    
+    def get_class_names(self):
+        return self.class_names
