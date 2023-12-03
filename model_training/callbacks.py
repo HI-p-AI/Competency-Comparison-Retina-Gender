@@ -46,7 +46,7 @@ def get_callbacks(config: dict):
         monitor = monitor_metric,
         save_best_only = True,
         save_weights_only= False,
-        mode = "max",
+        mode = "auto",
         verbose=1,
     )
 

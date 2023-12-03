@@ -20,7 +20,7 @@ class Config:
         'init_weights': 'imagenet',
         'batch_size': 32,
         'label_mode': 'categorical',
-        'base_path': './training',
+        'base_path': './saves',
         'last_layers_training_epochs': 20,
         'full_model_fine_tuning_epochs': 150,
         'early_stop_patience': 60,

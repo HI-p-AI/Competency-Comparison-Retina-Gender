@@ -30,7 +30,8 @@ def main():
     config.update_config({
         'model_name': 'vgg19', 
         'seed': SEED,
-        'image_size': (75, 75)
+        'image_size': (256, 256),
+        'batch_size': 32
     })
     config = config()
     
@@ -66,11 +67,11 @@ def main():
             model.summary(expand_nested=True, show_trainable=True)
 
     # Train the newly added layers of the model
-    history = train_model(model, config, train_ds, val_ds, config['last_layers_training_epochs'])
+    history = train_model(model, config, augmented_train_ds, val_ds, config['last_layers_training_epochs'])
 
     # Fine-tune the entire model
     base_model.trainable = True
-    history = train_model(model, config, train_ds, val_ds, config['full_model_fine_tuning_epochs'])
+    history = train_model(model, config, augmented_train_ds, val_ds, config['full_model_fine_tuning_epochs'])
     model.save(filenames['full_training'])
     plot_history(history, filenames['history'])
     
