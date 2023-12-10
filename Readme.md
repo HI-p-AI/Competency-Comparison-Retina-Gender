@@ -13,7 +13,7 @@ Retina specialists and researchers have been using color fundus photographs for 
 
 ## Dataset
 
-## Cite
+## Cite Our Paper
 If you use this code or our dataset, please cite our paper:
 ```
 @inproceedings{ahanaf,
