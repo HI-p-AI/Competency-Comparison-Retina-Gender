@@ -16,11 +16,14 @@ Retina specialists and researchers have been using color fundus photographs for 
 ## Cite Our Paper
 If you use this code or our dataset, please cite our paper:
 ```
-@inproceedings{Khan_ICCIT2023,
-  title={Competency Comparison of Deep Neural Networks for Identifying Gender in Color Fundus Photographs},
-  author={Md. Ahanaf Arif Khan, Md. Hasnain Ali, Nirjor Saha, Md. Sadman Shakib Shoumik, Sangeeta Biswas},
-  booktitle={International Conference on Computer and Information Technology (ICCIT)},
-  month={Dec},
-  year={2023}
+@inproceedings{Khan2023,
+  author    = {Md. Ahanaf Arif Khan and Md. Hasnain Ali and Nirjor Saha and Md. Sadman Shakib Shoumik and Sangeeta Biswas},
+  title     = {Competency Comparison of Deep Neural Networks for Identifying Gender in Color Fundus Photographs},
+  booktitle = {2023 26th International Conference on Computer and Information Technology (ICCIT)},
+  publisher = {IEEE},
+  doi       = {10.1109/iccit60459.2023.10441623},
+  url       = {http://dx.doi.org/10.1109/ICCIT60459.2023.10441623},
+  month   = dec, 
+  year    = {2023},
 }
 ```

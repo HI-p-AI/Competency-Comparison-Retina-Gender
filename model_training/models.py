@@ -11,7 +11,6 @@
 # Inporting Dependencies
 import tensorflow as tf
 from tensorflow import keras
-from config import Config
 
 
 def get_base_model(config: dict):
@@ -78,3 +77,15 @@ def get_model(config: dict):
     outputs = keras.layers.Dense(num_classes, activation='softmax')(x)
     
     return keras.Model(inputs, outputs), preprocess
+
+
+def get_preprocess(model_name:str):
+    preprocess = {
+        'densenet201': keras.applications.densenet.preprocess_input,
+        'inception_v3': keras.applications.inception_v3.preprocess_input,
+        'inception_resnet_v2': keras.applications.inception_resnet_v2.preprocess_input,
+        'resnet152': keras.applications.resnet.preprocess_input,
+        'vgg16': keras.applications.vgg16.preprocess_input,
+        'vgg19': keras.applications.vgg19.preprocess_input,
+    }
+    return preprocess[model_name]

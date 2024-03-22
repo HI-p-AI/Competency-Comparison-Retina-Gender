@@ -10,12 +10,11 @@
 import tensorflow as tf
 from tensorflow import keras
 import keras_cv
-from config import Config
 
 class ImageAugmentation:
     """Class for augmenting images
     """
-    def __init__(self, config:Config) -> None:
+    def __init__(self, config:dict) -> None:
         self.seed = config['seed']
         self.image_size = config['image_size']
         self.batch_size = config['batch_size']

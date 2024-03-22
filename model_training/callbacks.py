@@ -7,7 +7,6 @@
 # ==============================================
 
 from tensorflow import keras
-from config import Config
 import os
 
 
